@@ -41,5 +41,10 @@ app.configure "production", ->
 app.get "/", (req, res) ->
   res.render "index", title: "Backbone Todo App"
 
+app.post '/save', (req, res) ->
+  console.log req.body
+  console.log req.params
+  res.send req.xhr
+
 app.listen 3000
 console.log "Express server listening on port %d in %s mode", app.address().port, app.settings.env
