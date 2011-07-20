@@ -1,7 +1,234 @@
+box-shadow()
+  -moz-box-shadow    arguments
+  -webkit-box-shadow arguments
+  -o-box-shadow      arguments
+  box-shadow         arguments
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td 
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+
 body 
-  padding 50px
-  font 14px "Lucida Grande", Helvetica, Arial, sans-serif
+  line-height: 1;
+  color: black;
+  background: white;
 
-a 
-  color #00B7FF
+ol, ul 
+  list-style: none;
 
+a img 
+  border: none;
+
+
+html 
+  background: #eeeeee;
+
+  body 
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4em;
+    background: #eeeeee;
+    color: #333333;
+  
+
+#todoapp 
+  width: 480px;
+  margin: 0 auto 40px;
+  background: white;
+  padding: 20px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0 5px 6px 0;
+
+  h1 
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0 30px 0;
+    line-height: 1;
+  
+
+#create-todo 
+  position: relative;
+  input 
+    width: 466px;
+    font-size: 24px;
+    font-family: inherit;
+    line-height: 1.4em;
+    border: 0;
+    outline: none;
+    padding: 6px;
+    border: 1px solid #999999;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+
+  input::-webkit-input-placeholder 
+    font-style: italic;
+  
+  span 
+    position: absolute;
+    z-index: 999;
+    width: 170px;
+    left: 50%;
+    margin-left: -85px;
+    
+
+#todo-list 
+  margin-top: 10px;
+
+  li 
+    padding: 12px 20px 11px 0;
+    position: relative;
+    font-size: 24px;
+    line-height: 1.1em;
+    border-bottom: 1px solid #cccccc;
+
+  li:after 
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+    overflow: hidden;
+    visibility: hidden;
+
+  li.editing 
+    padding: 0;
+    border-bottom: 0;
+    
+  .editing .display, .edit 
+    display: none;
+
+  .editing 
+    .edit 
+      display: block;
+
+    input 
+      width: 444px;
+      font-size: 24px;
+      font-family: inherit;
+      margin: 0;
+      line-height: 1.6em;
+      border: 0;
+      outline: none;
+      padding: 10px 7px 0px 27px;
+      border: 1px solid #999999;
+      box-shadow: rgba(0, 0, 0, 0.2) 0 1px 2px 0 inset;
+      
+  .check 
+    position: relative;
+    top: 9px;
+    margin: 0 10px 0 7px;
+    float: left;
+
+  .done .todo-content 
+      text-decoration: line-through;
+      color: #777777;
+
+  .todo-destroy 
+    position: absolute;
+    right: 5px;
+    top: 14px;
+    display: none;
+    cursor: pointer;
+    width: 20px;
+    height: 20px;
+    background: url(/images/destroy.png) no-repeat 0 0;
+    
+  li:hover .todo-destroy 
+    display: block;
+
+  .todo-destroy:hover 
+    background-position: 0 -20px;
+    
+
+#todo-stats 
+  *zoom: 1;
+  margin-top: 10px;
+  color: #777777;
+  .todo-count 
+    float: left;
+    .number 
+      font-weight: bold;
+      color: #333333;
+        
+  .todo-clear 
+    float: right;
+    a 
+      color: #777777;
+      font-size: 12px;
+        
+    a:visited 
+      color: #777777;
+        
+    a:hover 
+      color: #336699;
+
+
+#todo-stats:after 
+  content: "\0020";
+  display: block;
+  height: 0;
+  clear: both;
+  overflow: hidden;
+  visibility: hidden;
+  
+  
+#instructions 
+  width: 520px;
+  margin: 10px auto;
+  color: #777777;
+  text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+  text-align: center;
+  a 
+    color: #336699;
+
+
+#credits 
+  width: 520px;
+  margin: 30px auto;
+  color: #999;
+  text-shadow: rgba(255, 255, 255, 0.8) 0 1px 0;
+  text-align: center;
+
+  a 
+    color: #888;
+
+
+
+/*
+ *  FranÃ§ois 'cahnory' Germain
+ */
+.ui-tooltip, .ui-tooltip-top, .ui-tooltip-right, .ui-tooltip-bottom, .ui-tooltip-left 
+  color:#ffffff;
+  cursor:normal;
+  display:-moz-inline-stack;
+  display:inline-block;
+  font-size:12px;
+  font-family:arial;
+  padding:.5em 1em;
+  position:relative;
+  text-align:center;
+  text-shadow:0 -1px 1px #111111;
+  -webkit-border-top-left-radius:4px ;
+  -webkit-border-top-right-radius:4px ;
+  -webkit-border-bottom-right-radius:4px ;
+  -webkit-border-bottom-left-radius:4px ;
+  -khtml-border-top-left-radius:4px ;
+  -khtml-border-top-right-radius:4px ;
+  -khtml-border-bottom-right-radius:4px ;
+  -khtml-border-bottom-left-radius:4px ;
+  -moz-border-radius-topleft:4px ;
+  -moz-border-radius-topright:4px ;
+  -moz-border-radius-bottomright:4px ;
