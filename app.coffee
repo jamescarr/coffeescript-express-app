@@ -8,13 +8,13 @@ app.configure ->
   coffeeDir = "#{viewsDir}/coffeescript"
 
   app.set "views", viewsDir
-  app.set "view engine", "jade"
+  app.set "view engine", "pug"
   app.use express.bodyParser()
   app.use express.methodOverride()
   app.use app.router
   app.use express.compiler(
-    src: viewsDir, 
-    dest: publicDir, 
+    src: viewsDir,
+    dest: publicDir,
     enable: ['coffeescript'])
   app.use(stylus.middleware debug: true, src: viewsDir, dest: publicDir, compile: compileMethod)
   app.use express.static(publicDir)
